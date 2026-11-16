@@ -78,7 +78,7 @@
         <div class="stats">
           <div><b data-count="3">3</b><span>Gelar juara KRTI bersama Bayucaraka</span></div>
           <div><b data-count="2">2</b><span>Magang industri di Gresik</span></div>
-          <div><b data-count="10" data-suffix="+">10+</b><span>Proyek embedded &amp; otomasi</span></div>
+          <div><b data-count="20" data-suffix="+">20+</b><span>Proyek embedded &amp; otomasi</span></div>
           <div><b data-count="15" data-suffix="+">15+</b><span>Sertifikat &amp; penghargaan</span></div>
         </div>
       </div>
@@ -174,82 +174,320 @@
       <div class="wrap">
         <div class="sec-head">
           <div><p class="kicker">Proyek</p><h2>Proyek pilihan</h2></div>
-          <p class="sec-sub">Dari PCB flight controller sampai panel listrik industri.</p>
+          <p class="sec-sub">Klik proyek untuk melihat studi kasusnya: masalah, solusi, dan hasil.</p>
         </div>
-
-        <article class="featured">
-          <div class="feat-media">
-            <img src="assets/img/krti2026-flighttest.jpg" alt="Uji terbang pesawat UAV Bayucaraka ITS" loading="lazy" />
-            <img src="assets/img/krti2025-plane.jpg" alt="Tim Bayucaraka bersama pesawat UAV" loading="lazy" />
-          </div>
+        <article class="featured" data-p="fc" tabindex="0">
+          <div class="feat-media n2"><img src="assets/img/krti2026-flighttest.jpg" alt="Flight controller custom dual-MCU" loading="lazy" /><img src="assets/img/krti2025-plane.jpg" alt="Flight controller custom dual-MCU" loading="lazy" /></div>
           <div class="feat-body">
-            <span class="pill pill-blue">★ Proyek unggulan · Bayucaraka ITS</span>
+            <span class="pill pill-blue">★ Unggulan · Bayucaraka ITS · KRTI 2026</span>
             <h3>Flight controller custom dual-MCU</h3>
-            <p>Flight controller rancangan sendiri untuk pesawat tim Bayucaraka ITS, dipakai di KRTI 2026.</p>
-            <dl class="specs">
-              <div><dt>MCU</dt><dd>STM32H753 + STM32F405</dd></div>
-              <div><dt>Lingkup</dt><dd>Skematik → PCB → BOM → fabrikasi</dd></div>
-              <div><dt>Protokol</dt><dd>UART · I²C · SPI</dd></div>
-              <div><dt>Hasil</dt><dd>Juara Umum KRTI 2026 (tim)</dd></div>
-            </dl>
+            <p>Flight controller rancangan sendiri untuk pesawat tim Bayucaraka ITS, dari skematik sampai fabrikasi.</p>
+            <dl class="specs"><div><dt>MCU</dt><dd>STM32H753 + STM32F405</dd></div><div><dt>Lingkup</dt><dd>Skematik → PCB → BOM → fabrikasi</dd></div><div><dt>Protokol</dt><dd>UART · I²C · SPI</dd></div><div><dt>Peran</dt><dd>Electrical engineer</dd></div></dl>
+            <span class="more-link">Lihat studi kasus →</span>
           </div>
         </article>
-
+        <article class="featured flip" data-p="fast" tabindex="0">
+          <div class="feat-media n1"><img src="assets/img/fast-sorter.jpg" alt="FAST — Flexible Auto Sorter (Quekit)" loading="lazy" /></div>
+          <div class="feat-body">
+            <span class="pill pill-blue">★ Unggulan · Proyek tim · tempat sampah pintar</span>
+            <h3>FAST — Flexible Auto Sorter (Quekit)</h3>
+            <p>Tempat sampah pintar yang memilah sampah organik/anorganik otomatis dengan multi-sensor, disinfeksi UV + mist, suara, dan dashboard web.</p>
+            <dl class="specs"><div><dt>Kontroler</dt><dd>ESP32 (PlatformIO, Arduino)</dd></div><div><dt>Sensor</dt><dd>IR · kapasitif · induktif · LDR · HC-SR04</dd></div><div><dt>Aktuator</dt><dd>Servo gerbang · relay UV · mist spray</dd></div><div><dt>Lainnya</dt><dd>DFPlayer Mini · INA219 · web server + REST API</dd></div></dl>
+            <span class="more-link">Lihat studi kasus →</span>
+          </div>
+        </article>
+        <div class="filters pfilters"><button class="active" data-pf="all">Semua</button><button class="" data-pf="uav">UAV</button><button class="" data-pf="iot">Embedded & IoT</button><button class="" data-pf="auto">Otomasi & kontrol</button><button class="" data-pf="akad">Akademik</button></div>
         <div class="cards">
-          <article class="card">
-            <div class="thumb"><img src="assets/img/trainer-kit-esp32-v2.jpg" alt="Trainer kit ESP32" loading="lazy" /></div>
+          <article class="card" data-cat="iot" data-p="trainer" tabindex="0">
+            <div class="thumb"><img src="assets/img/trainer-kit-esp32-v2.jpg" alt="Trainer kit ESP32 untuk praktikum" loading="lazy" /></div>
             <div class="card-body">
+              <span class="card-meta">2026 · Lab Microelectronics &amp; Embedded Systems</span>
               <h3>Trainer kit ESP32 untuk praktikum</h3>
-              <p>Board praktikum berbasis ESP32 dengan relay, LED, push button, buzzer, OLED, DHT11, ultrasonik, PIR, LDR, MPU-6050, dan servo untuk Lab Microelectronics &amp; Embedded Systems.</p>
+              <p>Board praktikum berbasis ESP32 dengan belasan modul sensor dan aktuator untuk mahasiswa DTEO.</p>
               <div class="chips"><span>ESP32</span><span>PCB</span><span>IoT</span></div>
+              <span class="more-link">Detail →</span>
             </div>
           </article>
-          <article class="card">
-            <div class="thumb"><img src="assets/img/magang-panel-konveyor.jpg" alt="Panel listrik konveyor" loading="lazy" style="object-position:center 45%" /></div>
+          <article class="card" data-cat="auto" data-p="twin" tabindex="0">
+            <div class="thumb icon-thumb"><span>TWIN</span></div>
             <div class="card-body">
-              <h3>Panel listrik konveyor (industri)</h3>
-              <p>Merancang dan merakit panel kontrol konveyor saat magang: kontaktor, overload relay, relay MY4N, terminal R-S-T, wiring motor 3 fasa, dan setting inverter.</p>
-              <div class="chips"><span>Panel</span><span>Motor 3 fasa</span><span>Inverter</span></div>
+              <span class="card-meta">2026 · Digital twin · PCB custom</span>
+              <h3>Kontroler konveyor untuk digital twin</h3>
+              <p>Firmware ESP32-S3 untuk motor konveyor dengan PID kecepatan, encoder, 4 IMU, dan protokol biner ber-CRC.</p>
+              <div class="chips"><span>ESP32-S3</span><span>PID</span><span>Digital twin</span></div>
+              <span class="more-link">Detail →</span>
             </div>
           </article>
-          <article class="card">
-            <div class="thumb"><img src="assets/img/atmega-conveyor.jpg" alt="Konveyor dengan sistem minimum ATmega" loading="lazy" /></div>
+          <article class="card" data-cat="auto" data-p="uvc" tabindex="0">
+            <div class="thumb icon-thumb"><span>UV-C</span></div>
             <div class="card-body">
-              <h3>Sistem minimum ATmega — konveyor &amp; motor AC (PID)</h3>
-              <p>Merancang sistem minimum ATmega dari nol untuk konveyor dan motor AC dengan kontrol PID, sampai tuning dan pengujian di lab.</p>
-              <div class="chips"><span>ATmega</span><span>PID</span><span>Motor AC</span></div>
+              <span class="card-meta">2026 · Sistem kontrol daya</span>
+              <h3>Lemari sterilisasi UV-C &amp; pengering pakaian</h3>
+              <p>Lemari otomatis dengan siklus pengeringan dan sterilisasi UV-C, interlock pintu, dan pemulihan setelah reset.</p>
+              <div class="chips"><span>ESP32</span><span>SSR</span><span>Safety</span></div>
+              <span class="more-link">Detail →</span>
             </div>
           </article>
-          <article class="card">
+          <article class="card" data-cat="iot" data-p="vms" tabindex="0">
             <div class="thumb icon-thumb"><span>LoRa</span></div>
             <div class="card-body">
-              <h3>Telemetri maritim &amp; dashboard multi-kapal</h3>
-              <p>Node ESP32 + LoRa mengirim GPS, sensor, dan sinyal darurat kapal ke dashboard Python dan web (Web Serial API) dengan peta rute dan ekspor CSV.</p>
-              <div class="chips"><span>ESP32</span><span>LoRa</span><span>JavaScript</span></div>
+              <span class="card-meta">2026 · Telemetri maritim</span>
+              <h3>Maritime VMS — telemetri multi-kapal</h3>
+              <p>Sistem pemantauan kapal: node sensor + GPS mengirim data via ESP-NOW dan LoRa ke layar sentuh 7&quot; dan dashboard web.</p>
+              <div class="chips"><span>ESP32-S3</span><span>LoRa</span><span>LVGL</span></div>
+              <span class="more-link">Detail →</span>
             </div>
           </article>
-          <article class="card">
-            <div class="thumb"><img src="assets/img/lab-dteo-robot.jpg" alt="Lab DTEO ITS dengan lengan robot" loading="lazy" /></div>
+          <article class="card" data-cat="auto" data-p="atmega" tabindex="0">
+            <div class="thumb"><img src="assets/img/atmega-conveyor.jpg" alt="Sistem minimum ATmega — konveyor &amp; motor AC (PID)" loading="lazy" /></div>
             <div class="card-body">
+              <span class="card-meta">Semester 3 · Proyek kuliah DTEO</span>
+              <h3>Sistem minimum ATmega — konveyor &amp; motor AC (PID)</h3>
+              <p>Sistem minimum ATmega dirancang dari nol untuk menggerakkan konveyor dan motor AC dengan kontrol PID.</p>
+              <div class="chips"><span>ATmega</span><span>PID</span><span>Motor AC</span></div>
+              <span class="more-link">Detail →</span>
+            </div>
+          </article>
+          <article class="card" data-cat="akad" data-p="pjbl2" tabindex="0">
+            <div class="thumb"><img src="assets/img/pjbl-sem2-modul.jpg" alt="PjBL semester 2 — modul trainer elektronika dasar" loading="lazy" /></div>
+            <div class="card-body">
+              <span class="card-meta">Semester 2 · PjBL · Teknik Elektro Otomasi</span>
+              <h3>PjBL semester 2 — modul trainer elektronika dasar</h3>
+              <p>Satu set modul trainer di atas base akrilik: catu daya, rangkaian DC, pembagi tegangan &amp; arus, rangkaian digital, dan kendali motor DC.</p>
+              <div class="chips"><span>Elektronika dasar</span><span>PCB</span><span>Tim</span></div>
+              <span class="more-link">Detail →</span>
+            </div>
+          </article>
+          <article class="card" data-cat="akad" data-p="cbl" tabindex="0">
+            <div class="thumb"><img src="assets/img/cbl-dasar-otomasi.jpg" alt="CBL Dasar Otomasi Industri 2 — trainer kendali motor DC" loading="lazy" /></div>
+            <div class="card-body">
+              <span class="card-meta">Semester 2 · Case Based Learning · Kelompok A2</span>
+              <h3>CBL Dasar Otomasi Industri 2 — trainer kendali motor DC</h3>
+              <p>Trainer berbasis potensiometer dan PWM untuk mengatur motor DC, dengan display 7-segment untuk nilai pengaturan.</p>
+              <div class="chips"><span>PWM</span><span>Motor DC</span><span>Trainer</span></div>
+              <span class="more-link">Detail →</span>
+            </div>
+          </article>
+          <article class="card" data-cat="iot" data-p="ricebox" tabindex="0">
+            <div class="thumb icon-thumb"><span>RH%</span></div>
+            <div class="card-body">
+              <span class="card-meta">2026 · IoT · state machine</span>
+              <h3>WeatherNode — kontrol silica gel kotak beras</h3>
+              <p>Kontroler kelembapan kotak beras: silica gel otomatis di-charge ulang berdasarkan RH, dipantau lewat LCD dan web.</p>
+              <div class="chips"><span>ESP32</span><span>State machine</span><span>Web</span></div>
+              <span class="more-link">Detail →</span>
+            </div>
+          </article>
+          <article class="card" data-cat="iot" data-p="voice" tabindex="0">
+            <div class="thumb icon-thumb"><span>AI</span></div>
+            <div class="card-body">
+              <span class="card-meta">2026 · Eksperimen AI + embedded</span>
+              <h3>Kontrol suara ESP32 dengan Gemini API</h3>
+              <p>Perintah suara lewat mikrofon I²S dikirim ke Gemini API; balasan JSON dieksekusi ke servo, OLED, LED RGB, buzzer, dan relay.</p>
+              <div class="chips"><span>ESP32</span><span>I²S</span><span>API</span></div>
+              <span class="more-link">Detail →</span>
+            </div>
+          </article>
+          <article class="card" data-cat="auto" data-p="panel" tabindex="0">
+            <div class="thumb"><img src="assets/img/magang-panel-konveyor.jpg" alt="Panel listrik konveyor (industri)" loading="lazy" /></div>
+            <div class="card-body">
+              <span class="card-meta">2022 · Magang industri</span>
+              <h3>Panel listrik konveyor (industri)</h3>
+              <p>Merancang dan merakit panel kontrol konveyor saat magang di PT Suryamasinka Semestaraya.</p>
+              <div class="chips"><span>Panel</span><span>3 fasa</span><span>Inverter</span></div>
+              <span class="more-link">Detail →</span>
+            </div>
+          </article>
+          <article class="card" data-cat="auto" data-p="jaka" tabindex="0">
+            <div class="thumb"><img src="assets/img/lab-dteo-robot.jpg" alt="Lengan robot JAKA Zu5 &amp; digital twin uArm" loading="lazy" /></div>
+            <div class="card-body">
+              <span class="card-meta">2025 · Robotika · DTEO</span>
               <h3>Lengan robot JAKA Zu5 &amp; digital twin uArm</h3>
-              <p>Skrip Python berbasis menu untuk robot kolaboratif JAKA Zu5 di Ubuntu (jaka_ros2), serta digital twin uArm Swift Pro dan konveyor untuk PjBL DTEO.</p>
-              <div class="chips"><span>Python</span><span>ROS 2</span><span>Digital twin</span></div>
+              <p>Skrip Python berbasis menu untuk robot kolaboratif JAKA Zu5 (ROS 2) dan digital twin uArm Swift Pro + konveyor.</p>
+              <div class="chips"><span>Python</span><span>ROS 2</span><span>Robot arm</span></div>
+              <span class="more-link">Detail →</span>
             </div>
           </article>
-          <article class="card">
-            <div class="thumb icon-thumb alt"><span>PID</span></div>
+          <article class="card" data-cat="akad" data-p="balance" tabindex="0">
+            <div class="thumb"><img src="assets/img/ieee-member-training.jpg" alt="Robot beroda dua self-balancing" loading="lazy" /></div>
             <div class="card-body">
+              <span class="card-meta">2024 · IEEE ITS SB · Best Member</span>
               <h3>Robot beroda dua self-balancing</h3>
-              <p>Dua motor menjaga keseimbangan robot dengan kontrol PID. Proyek pelatihan IEEE ITS SB yang meraih predikat Best Member.</p>
-              <div class="chips"><span>PID</span><span>IMU</span><span>Mikrokontroler</span></div>
+              <p>Robot dua roda yang menjaga keseimbangan dengan kontrol PID, proyek pelatihan IEEE ITS SB.</p>
+              <div class="chips"><span>PID</span><span>Robotika</span></div>
+              <span class="more-link">Detail →</span>
             </div>
           </article>
         </div>
-        <div class="more-projects">
-          <div><b>Mobil robot pendeteksi gas</b><span>MQ-7 · BTS7960 · ESP-NOW ke penerima ESP8266</span></div>
-          <div><b>Sistem ventilasi otomatis</b><span>Arduino Uno · DHT22 · MQ-7</span></div>
-          <div><b>Lengan robot 5 DOF pengaduk teh</b><span>Tugas akhir SMK · Arduino · servo</span></div>
-        </div>
+        <div class="more-projects"><div><b>Smart UV &amp; LED controller</b><span>ESP32-C3 · web AP · timer · Preferences</span></div><div><b>Encoder rotary → stepper</b><span>ESP32 · interrupt · driver stepper</span></div><div><b>Mobil robot pendeteksi gas</b><span>MQ-7 · BTS7960 · ESP-NOW → ESP8266</span></div><div><b>Sistem ventilasi otomatis</b><span>Arduino Uno · DHT22 · MQ-7</span></div><div><b>Lengan robot 5 DOF pengaduk teh</b><span>Tugas akhir SMK · Arduino · servo</span></div><div><b>Web LED controller praktikum</b><span>ESP32 · WebServer · mode auto/manual</span></div></div>
+<template id="tp-fc"><div class="cs">
+  <div class="cs-gallery n2"><img src="assets/img/krti2026-flighttest.jpg" alt="Flight controller custom dual-MCU" loading="lazy" /><img src="assets/img/krti2025-plane.jpg" alt="Flight controller custom dual-MCU" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Bayucaraka ITS · KRTI 2026 · 2025–2026</span>
+    <h3>Flight controller custom dual-MCU</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Tim butuh flight controller yang bisa disesuaikan dengan kebutuhan misi KRTI, bukan sekadar board komersial siap pakai.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Merancang flight controller dual-MCU STM32H753 + STM32F405: skematik, layout PCB, penyusunan BOM, sampai fabrikasi, lalu integrasi dengan sistem kelistrikan pesawat.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Dipakai di pesawat tim pada KRTI 2026, saat Bayucaraka ITS meraih Juara Umum dan Juara Harapan 1 divisi Technology Development.</p></div>
+    </div>
+    <dl class="specs"><div><dt>MCU</dt><dd>STM32H753 + STM32F405</dd></div><div><dt>Lingkup</dt><dd>Skematik → PCB → BOM → fabrikasi</dd></div><div><dt>Protokol</dt><dd>UART · I²C · SPI</dd></div><div><dt>Peran</dt><dd>Electrical engineer</dd></div></dl>
+  </div></div></template>
+<template id="tp-fast"><div class="cs">
+  <div class="cs-gallery n1"><img src="assets/img/fast-sorter.jpg" alt="FAST — Flexible Auto Sorter (Quekit)" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Proyek tim · tempat sampah pintar · Des 2025</span>
+    <h3>FAST — Flexible Auto Sorter (Quekit)</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Sampah organik dan anorganik sering tercampur karena pengguna salah buang, dan petugas tidak tahu kapan tempat sampah penuh.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>ESP32 membaca lima sensor (IR, kapasitif, induktif, LDR, ultrasonik) dengan jendela sampling dan ambang yang bisa dikalibrasi. Servo membuka gerbang hanya untuk jenis sampah yang sesuai mode (organik/anorganik). Setelah menerima sampah, relay menyalakan lampu UV dan mist spray. DFPlayer memutar 10 pesan suara, dan INA219 memantau baterai serta status charging.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Dashboard web di ESP32 (SPIFFS) menampilkan klasifikasi real-time, level baterai, status penuh, dan halaman kalibrasi; mode bisa diganti lewat web tanpa upload ulang firmware.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Kontroler</dt><dd>ESP32 (PlatformIO, Arduino)</dd></div><div><dt>Sensor</dt><dd>IR · kapasitif · induktif · LDR · HC-SR04</dd></div><div><dt>Aktuator</dt><dd>Servo gerbang · relay UV · mist spray</dd></div><div><dt>Lainnya</dt><dd>DFPlayer Mini · INA219 · web server + REST API</dd></div></dl>
+  </div></div></template>
+<template id="tp-trainer"><div class="cs">
+  <div class="cs-gallery n1"><img src="assets/img/trainer-kit-esp32-v2.jpg" alt="Trainer kit ESP32 untuk praktikum" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Lab Microelectronics &amp; Embedded Systems · 2026</span>
+    <h3>Trainer kit ESP32 untuk praktikum</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Praktikum embedded butuh media yang ringkas: mahasiswa bisa langsung mencoba banyak sensor tanpa merangkai dari nol.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Merancang satu board berisi ESP32, relay, 5 LED, 5 push button, buzzer, OLED, DHT11, ultrasonik, PIR, LDR, mikrofon I²S, MPU-6050, dan servo, lengkap dengan header pin berlabel.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Dipakai sebagai media praktik IoT dan embedded di Lab Microelectronics &amp; Embedded Systems DTEO ITS.</p></div>
+    </div>
+    <dl class="specs"><div><dt>MCU</dt><dd>ESP32 DevKit</dd></div><div><dt>Modul</dt><dd>14+ sensor &amp; aktuator</dd></div><div><dt>Fokus</dt><dd>Praktikum IoT &amp; embedded</dd></div></dl>
+  </div></div></template>
+<template id="tp-twin"><div class="cs">
+  <div class="cs-gallery icon-thumb big"><span>TWIN</span></div>
+  <div class="cs-body">
+    <span class="pill">Digital twin · PCB custom · 2026</span>
+    <h3>Kontroler konveyor untuk digital twin</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Model digital twin konveyor butuh data fisik yang akurat dan perintah yang andal dari PC.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Motor DC 25GA370 dikendalikan L298N dengan PWM 20 kHz dan PID RPM, encoder dibaca lewat PCNT, arus lewat ACS712, dan 4 IMU MPU6050 lewat multiplexer PCA9548A. Komunikasi memakai frame biner [0xAA][CMD][LEN][DATA][CRC8].</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Mendukung mode open-loop/PID, deteksi stall dan overcurrent, heartbeat watchdog, serta indikator status RGB.</p></div>
+    </div>
+    <dl class="specs"><div><dt>MCU</dt><dd>ESP32-S3</dd></div><div><dt>Kontrol</dt><dd>PID RPM · PWM 20 kHz</dd></div><div><dt>Sensor</dt><dd>Encoder · ACS712 · 4× MPU6050</dd></div><div><dt>Protokol</dt><dd>Frame biner + CRC8</dd></div></dl>
+  </div></div></template>
+<template id="tp-uvc"><div class="cs">
+  <div class="cs-gallery icon-thumb big"><span>UV-C</span></div>
+  <div class="cs-body">
+    <span class="pill">Sistem kontrol daya · 2026</span>
+    <h3>Lemari sterilisasi UV-C &amp; pengering pakaian</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Pengeringan dan sterilisasi pakaian harus aman: lampu UV-C dan heater 2 kW tidak boleh menyala saat pintu terbuka.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>ESP32 mengatur 4 lampu UV-C 8 W, 2 PTC heater 1000 W lewat SSR, dan 2 blower. Siklus otomatis: DRYING → COOL DOWN (sampai &lt; 40 °C) → selesai. Limit switch pintu menjeda siklus, dan tombol emergency menghentikan semua beban.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Status fase disimpan ke EEPROM tiap 5 detik, sehingga siklus otomatis lanjut kembali setelah listrik padam atau ESP32 reset.</p></div>
+    </div>
+    <dl class="specs"><div><dt>MCU</dt><dd>ESP32-WROOM-32D</dd></div><div><dt>Beban</dt><dd>UV-C 4×8 W · heater 2×1000 W · blower</dd></div><div><dt>Proteksi</dt><dd>Interlock pintu · emergency · EEPROM resume</dd></div><div><dt>UI</dt><dd>OLED 128×64 · 3 tombol · buzzer</dd></div></dl>
+  </div></div></template>
+<template id="tp-vms"><div class="cs">
+  <div class="cs-gallery icon-thumb big"><span>LoRa</span></div>
+  <div class="cs-body">
+    <span class="pill">Telemetri maritim · 2026</span>
+    <h3>Maritime VMS — telemetri multi-kapal</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Kapal kecil butuh pemantauan posisi, kondisi mesin, dan tombol darurat tanpa jaringan seluler.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Hub ESP32-S3 menggabungkan data sensor (suhu, kelembapan, asap, api, BBM) dari node ESP-NOW dengan GPS, lalu mengirimnya lewat LoRa E220. Layar Waveshare ESP32-S3 7&quot; (LVGL) menampilkan gauge, grafik, dan peta dua kapal.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Ada juga dashboard web (Web Serial API) dengan peta rute, alarm darurat, dan ekspor CSV.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Radio</dt><dd>LoRa E220 · ESP-NOW</dd></div><div><dt>Display</dt><dd>Waveshare ESP32-S3 7&quot; · LVGL</dd></div><div><dt>Data</dt><dd>GPS · suhu · asap · api · BBM</dd></div></dl>
+  </div></div></template>
+<template id="tp-atmega"><div class="cs">
+  <div class="cs-gallery n2"><img src="assets/img/atmega-conveyor.jpg" alt="Sistem minimum ATmega — konveyor &amp; motor AC (PID)" loading="lazy" /><img src="assets/img/atmega-motor.jpg" alt="Sistem minimum ATmega — konveyor &amp; motor AC (PID)" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Proyek kuliah DTEO · Semester 3</span>
+    <h3>Sistem minimum ATmega — konveyor &amp; motor AC (PID)</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Kecepatan konveyor harus stabil walaupun beban berubah.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Merakit sistem minimum ATmega, wiring konveyor dan motor AC, memprogram kontrol PID, lalu tuning parameter Kp, Ki, Kd di lab.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Kecepatan konveyor stabil dan responsnya bisa diatur lewat parameter PID.</p></div>
+    </div>
+    <dl class="specs"><div><dt>MCU</dt><dd>ATmega</dd></div><div><dt>Kontrol</dt><dd>PID</dd></div><div><dt>Plant</dt><dd>Konveyor · motor AC</dd></div></dl>
+  </div></div></template>
+<template id="tp-pjbl2"><div class="cs">
+  <div class="cs-gallery n2"><img src="assets/img/pjbl-sem2-modul.jpg" alt="PjBL semester 2 — modul trainer elektronika dasar" loading="lazy" /><img src="assets/img/pjbl-sem2-tim.jpg" alt="PjBL semester 2 — modul trainer elektronika dasar" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">PjBL · Teknik Elektro Otomasi · Semester 2</span>
+    <h3>PjBL semester 2 — modul trainer elektronika dasar</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Materi elektronika dasar lebih mudah dipahami kalau bisa diukur langsung di rangkaian nyata.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Membuat beberapa modul PCB terpisah: catu daya trafo 1 A dengan regulator, rangkaian DC, pembagi tegangan dan pembagi arus, rangkaian logika IC digital dengan 7-segment, serta kendali motor DC dengan transistor.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Modul dipresentasikan bersama laporan analisis korelasi mata kuliah di Lab Microelectronics &amp; Embedded Systems DTEO.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Modul</dt><dd>Catu daya · DC · pembagi tegangan/arus · digital · motor DC</dd></div><div><dt>Konstruksi</dt><dd>PCB lubang · spacer · base akrilik</dd></div></dl>
+  </div></div></template>
+<template id="tp-cbl"><div class="cs">
+  <div class="cs-gallery n1"><img src="assets/img/cbl-dasar-otomasi.jpg" alt="CBL Dasar Otomasi Industri 2 — trainer kendali motor DC" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Case Based Learning · Kelompok A2 · Semester 2</span>
+    <h3>CBL Dasar Otomasi Industri 2 — trainer kendali motor DC</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Mahasiswa perlu memahami hubungan tegangan input, PWM, dan kecepatan motor secara langsung.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Membangun trainer dengan potensiometer, keluaran PWM, motor DC, dan display 7-segment, lalu mengukur Vin/Vout dengan multimeter.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Trainer dipakai untuk pengujian dan presentasi Case Based Learning Dasar Otomasi Industri 2.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Komponen</dt><dd>Potensiometer · PWM · motor DC · 7-segment</dd></div><div><dt>Pengujian</dt><dd>Multimeter Vin/Vout</dd></div></dl>
+  </div></div></template>
+<template id="tp-ricebox"><div class="cs">
+  <div class="cs-gallery icon-thumb big"><span>RH%</span></div>
+  <div class="cs-body">
+    <span class="pill">IoT · state machine · 2026</span>
+    <h3>WeatherNode — kontrol silica gel kotak beras</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Silica gel di kotak beras jenuh tanpa disadari, sehingga beras lembap.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>ESP32 membaca 2 DHT11 dan menjalankan state machine ABSORB → CHARGE (relay heater) → COOLDOWN, dengan ambang RH dan durasi yang bisa diatur lewat web (mode Access Point).</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Siklus regenerasi silica gel berjalan otomatis tanpa perlu dipantau manual.</p></div>
+    </div>
+    <dl class="specs"><div><dt>MCU</dt><dd>ESP32</dd></div><div><dt>Sensor</dt><dd>2× DHT11</dd></div><div><dt>UI</dt><dd>LCD 16×2 I²C · web AP</dd></div></dl>
+  </div></div></template>
+<template id="tp-voice"><div class="cs">
+  <div class="cs-gallery icon-thumb big"><span>AI</span></div>
+  <div class="cs-body">
+    <span class="pill">Eksperimen AI + embedded · 2026</span>
+    <h3>Kontrol suara ESP32 dengan Gemini API</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Ingin mengontrol perangkat dengan bahasa natural, bukan tombol atau perintah kaku.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>ESP32 merekam suara dari INMP441, mengirimnya ke Gemini API lewat HTTPS, lalu mem-parsing JSON perintah dengan ArduinoJson.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Contoh perintah seperti &quot;arahkan servo ke 90 derajat&quot; atau &quot;tulis aufa di OLED&quot; langsung dieksekusi hardware.</p></div>
+    </div>
+    <dl class="specs"><div><dt>MCU</dt><dd>ESP32</dd></div><div><dt>Input</dt><dd>INMP441 (I²S)</dd></div><div><dt>Output</dt><dd>Servo · OLED · WS2812 · buzzer · relay</dd></div></dl>
+  </div></div></template>
+<template id="tp-panel"><div class="cs">
+  <div class="cs-gallery n1"><img src="assets/img/magang-panel-konveyor.jpg" alt="Panel listrik konveyor (industri)" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Magang industri · 2022</span>
+    <h3>Panel listrik konveyor (industri)</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Konveyor produksi butuh panel kontrol yang rapi, aman, dan mudah dirawat.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Wiring kontaktor, overload relay, relay MY4N, terminal R-S-T, motor 3 fasa, dan setting inverter.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Panel terpasang dengan label kabel rapi dan siap dioperasikan.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Komponen</dt><dd>Kontaktor · TOR · relay · inverter</dd></div><div><dt>Beban</dt><dd>Motor 3 fasa</dd></div></dl>
+  </div></div></template>
+<template id="tp-jaka"><div class="cs">
+  <div class="cs-gallery n1"><img src="assets/img/lab-dteo-robot.jpg" alt="Lengan robot JAKA Zu5 &amp; digital twin uArm" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Robotika · DTEO · 2025</span>
+    <h3>Lengan robot JAKA Zu5 &amp; digital twin uArm</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Robot kolaboratif perlu antarmuka sederhana untuk demo dan praktikum.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Membuat skrip Python berbasis menu di Ubuntu dengan workspace jaka_ros2, serta model digital twin untuk uArm Swift Pro dan konveyor.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Gerakan robot bisa dijalankan dari menu tanpa menulis perintah satu per satu.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Platform</dt><dd>Ubuntu · ROS 2 · Python</dd></div><div><dt>Robot</dt><dd>JAKA Zu5 · uArm Swift Pro</dd></div></dl>
+  </div></div></template>
+<template id="tp-balance"><div class="cs">
+  <div class="cs-gallery n1"><img src="assets/img/ieee-member-training.jpg" alt="Robot beroda dua self-balancing" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">IEEE ITS SB · Best Member · 2024</span>
+    <h3>Robot beroda dua self-balancing</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Robot dua roda secara alami tidak stabil dan akan jatuh tanpa kontrol aktif.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Membaca sudut kemiringan dan mengatur kecepatan dua motor dengan kontrol PID.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Meraih predikat Best Member pelatihan anggota IEEE ITS SB Module PID.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Kontrol</dt><dd>PID</dd></div><div><dt>Aktuator</dt><dd>2 motor DC</dd></div></dl>
+  </div></div></template>
       </div>
     </section>
 
@@ -446,6 +684,11 @@
         </div>
         <div class="gallery">
           <figure data-cat="krti" class="wide"><img src="assets/img/krti2026-team.jpg" alt="Tim Bayucaraka KRTI 2026" loading="lazy" /><figcaption>Malam penganugerahan KRTI 2026</figcaption></figure>
+          <figure data-cat="lab" class="wide"><img src="assets/img/fast-sorter.jpg" alt="FAST Flexible Auto Sorter" loading="lazy" /><figcaption>FAST — tempat sampah pemilah otomatis + dashboard</figcaption></figure>
+          <figure data-cat="lab"><img src="assets/img/tim-dteo-presentasi.jpg" alt="Presentasi tim di DTEO ITS" loading="lazy" /><figcaption>Presentasi project tim · DTEO ITS</figcaption></figure>
+          <figure data-cat="lab"><img src="assets/img/cbl-dasar-otomasi.jpg" alt="Pengujian trainer CBL" loading="lazy" /><figcaption>Pengujian trainer CBL Dasar Otomasi Industri 2</figcaption></figure>
+          <figure data-cat="lab" class="wide"><img src="assets/img/pjbl-sem2-modul.jpg" alt="Modul PjBL semester 2" loading="lazy" /><figcaption>Modul trainer PjBL semester 2</figcaption></figure>
+          <figure data-cat="lab"><img src="assets/img/pjbl-sem2-tim.jpg" alt="Tim PjBL semester 2" loading="lazy" style="object-position:center 60%" /><figcaption>Tim PjBL semester 2</figcaption></figure>
           <figure data-cat="krti"><img src="assets/img/krti2026-stage.jpg" alt="Panggung juara KRTI 2026" loading="lazy" /><figcaption>Juara Umum KRTI 2026</figcaption></figure>
           <figure data-cat="ind"><img src="assets/img/magang-cnc-cabinet.jpg" alt="Panel listrik CNC" loading="lazy" /><figcaption>Panel listrik CNC &amp; servo drive</figcaption></figure>
           <figure data-cat="krti"><img src="assets/img/krti2025-award.jpg" alt="Piala KRTI 2025" loading="lazy" style="object-position:center 30%" /><figcaption>Juara 2 TD · KRTI 2025</figcaption></figure>
@@ -501,6 +744,7 @@
     </div>
   </footer>
 
+  <div class="pmodal" hidden role="dialog" aria-modal="true"><div class="pm-card"><button class="pm-close" aria-label="Tutup">×</button><div class="pm-content"></div></div></div>
   <div class="lightbox" hidden>
     <button class="lb-close" aria-label="Tutup">×</button>
     <button class="lb-prev" aria-label="Sebelumnya">‹</button>

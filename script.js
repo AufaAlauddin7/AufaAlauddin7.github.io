@@ -141,3 +141,31 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') show(idx + 1);
   if (e.key === 'ArrowLeft') show(idx - 1);
 });
+
+// ===== Filter proyek =====
+const pcards=[...document.querySelectorAll('.cards .card')];
+document.querySelectorAll('.pfilters button').forEach(btn=>btn.addEventListener('click',()=>{
+  document.querySelectorAll('.pfilters button').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const f=btn.dataset.pf;
+  pcards.forEach(c=>{const h=f!=='all'&&c.dataset.cat!==f;c.classList.toggle('hide',h);if(!h)c.classList.add('in');});
+}));
+
+// ===== Modal studi kasus proyek =====
+const pm=document.querySelector('.pmodal');
+const pmContent=pm.querySelector('.pm-content');
+let lastFocus=null;
+function openProject(id){
+  const t=document.getElementById('tp-'+id); if(!t) return;
+  pmContent.innerHTML=''; pmContent.appendChild(t.content.cloneNode(true));
+  lastFocus=document.activeElement; pm.hidden=false; document.body.style.overflow='hidden';
+  pm.querySelector('.pm-close').focus();
+}
+function closeProject(){pm.hidden=true;document.body.style.overflow='';if(lastFocus)lastFocus.focus();}
+document.querySelectorAll('[data-p]').forEach(el=>{
+  el.addEventListener('click',()=>openProject(el.dataset.p));
+  el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openProject(el.dataset.p);}});
+});
+pm.querySelector('.pm-close').addEventListener('click',closeProject);
+pm.addEventListener('click',e=>{if(e.target===pm)closeProject();});
+document.addEventListener('keydown',e=>{if(!pm.hidden&&e.key==='Escape')closeProject();});
