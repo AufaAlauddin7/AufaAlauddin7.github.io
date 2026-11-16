@@ -461,28 +461,6 @@ a.cert:hover{border-color:var(--primary)}
 
 
 /* ============ TEMA "PRESISI TEKNIK" ============ */
-/* Hero gelap bernuansa ruang kontrol, di kedua mode */
-.hero{--bg:#08111f;--surface:#0f1b31;--surface-2:#13223d;--text:#eef3fb;--muted:#9fb0c9;--line:#1d2c48;--line-strong:#2b3f63;
-  --chip-bg:#16264a;--chip-text:#b4c6ff;--primary:#7b9bff;
-  background:radial-gradient(1200px 600px at 85% -10%,#132a5c 0%,transparent 60%),radial-gradient(900px 500px at -10% 110%,#0b3346 0%,transparent 55%),linear-gradient(180deg,#08111f,#0a1528);
-  color:var(--text)}
-[data-theme="dark"] .hero{background:radial-gradient(1200px 600px at 85% -10%,#10234d 0%,transparent 60%),radial-gradient(900px 500px at -10% 110%,#082a3a 0%,transparent 55%),linear-gradient(180deg,#050a14,#08111f)}
-.hero h1{color:#fff}
-.hero .grad{background:linear-gradient(120deg,#8fb0ff 0%,#5cc8ff 55%,#22d3ee 100%);-webkit-background-clip:text;background-clip:text}
-.hero .dots{opacity:.35}
-.hero .pcb-tr path{opacity:.9}
-.hero .btn-outline{background:transparent;border-color:#2b3f63;color:#eef3fb}
-.hero .btn-outline:hover{border-color:#7b9bff;background:rgba(123,155,255,.08)}
-.hero .stats b{background:linear-gradient(120deg,#8fb0ff,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .photo-card::before{background:linear-gradient(135deg,#2457e6,#06b6d4);opacity:.35}
-.hero .status .dot{background:#22c55e}
-/* Navbar menyatu dengan hero gelap saat di puncak halaman */
-.nav:not(.scrolled){background:#08111f;border-bottom-color:rgba(255,255,255,.06)}
-[data-theme="dark"] .nav:not(.scrolled){background:#050a14}
-.nav:not(.scrolled) .brand{color:#e6edf8}
-@media (min-width:821px){.nav:not(.scrolled) .nav-links a{color:#c9d5e8}.nav:not(.scrolled) .nav-links a:hover,.nav:not(.scrolled) .nav-links a.active{background:rgba(255,255,255,.08);color:#fff}}
-.nav:not(.scrolled) .theme-toggle,.nav:not(.scrolled) .nav-toggle{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#e6edf8}
-
 /* Tombol utama: solid kobalt, bukan gradien penuh */
 .btn-primary{background:#2457e6;background-image:linear-gradient(180deg,rgba(255,255,255,.12),transparent)}
 .btn-primary:hover{background-color:#1d4ed8}
@@ -508,3 +486,85 @@ h2{letter-spacing:-.03em}
 /* Progress bar & seleksi */
 ::selection{background:color-mix(in srgb,var(--primary) 25%,transparent)}
 img[src*="digital-twin-konveyor"]{object-fit:contain;background:#fff}
+
+/* ============ GALERI: SOROTAN ============ */
+.gallery figure.hl{grid-column:span 2;box-shadow:var(--shadow-lg);outline:1px solid color-mix(in srgb,var(--primary) 35%,transparent);outline-offset:-1px}
+.gallery figure.hl.big{grid-row:span 2}
+.gallery figure.hl figcaption{padding:60px 20px 18px;background:linear-gradient(transparent,rgba(5,12,24,.9))}
+.gallery figure.hl figcaption b{display:block;font-size:1.02rem;font-weight:700;letter-spacing:-.01em}
+.gallery figure.hl.big figcaption b{font-size:1.35rem}
+.gallery figure.hl figcaption small{display:block;margin-top:3px;font-size:.8rem;font-weight:500;color:#c4d2e8}
+.hl-tag{position:absolute;top:14px;left:14px;z-index:2;font-size:.72rem;font-weight:700;letter-spacing:.04em;color:#fff;
+  padding:5px 11px;border-radius:999px;background:rgba(8,17,31,.55);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.gallery figure.hl.big .hl-tag{background:var(--gold);border-color:transparent;color:#1a1204}
+@media (max-width:960px){.gallery figure.hl.big{grid-column:span 3}.gallery figure.hl{grid-column:span 3}}
+@media (max-width:640px){.gallery figure.hl,.gallery figure.hl.big{grid-column:span 2}.gallery figure.hl.big{grid-row:span 3}.gallery figure.hl figcaption{padding:40px 12px 10px}.gallery figure.hl.big figcaption b{font-size:1.1rem}}
+
+
+/* ============ FRESH: hero terang & lapang ============ */
+.i{width:20px;height:20px;display:block}
+.hero{background:
+  radial-gradient(900px 520px at 88% 8%,rgba(96,165,250,.20),transparent 62%),
+  radial-gradient(700px 480px at 6% 92%,rgba(45,212,191,.16),transparent 60%),
+  radial-gradient(600px 400px at 45% 40%,rgba(255,255,255,.7),transparent 70%),
+  linear-gradient(180deg,#f8fbff 0%,#f3f7fd 100%)}
+[data-theme="dark"] .hero{background:
+  radial-gradient(900px 520px at 88% 8%,rgba(61,107,255,.22),transparent 62%),
+  radial-gradient(700px 480px at 6% 92%,rgba(34,211,238,.12),transparent 60%),var(--bg)}
+.hero .blob{display:none}
+.hero .dots{opacity:.45}
+.hero .pcb-tr path{stroke:#c9d6ea;opacity:.9}
+.hero .pcb-pad circle{stroke:#c9d6ea}
+[data-theme="dark"] .hero .pcb-tr path,[data-theme="dark"] .hero .pcb-pad circle{stroke:#22324f}
+.hero .grad{background:linear-gradient(110deg,#2457e6 0%,#3b82f6 45%,#0ea5b7 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+[data-theme="dark"] .hero .grad{background:linear-gradient(110deg,#8fb0ff,#5cc8ff 50%,#2dd4bf);-webkit-background-clip:text;background-clip:text}
+.hero h1{letter-spacing:-.04em}
+.hero .stats b{background:none;color:var(--text);-webkit-text-fill-color:currentColor}
+.hero .stats b{color:var(--primary)}
+
+/* Foto: bingkai bersih, tanpa blok miring */
+.photo-card{transform:none;padding:8px;border-radius:28px;background:rgba(255,255,255,.75);backdrop-filter:blur(10px);border:1px solid rgba(203,213,225,.7);
+  box-shadow:0 40px 80px -40px rgba(36,87,230,.45),0 12px 30px -18px rgba(10,19,36,.25)}
+[data-theme="dark"] .photo-card{background:rgba(15,26,46,.7);border-color:var(--line)}
+.photo-card:hover{transform:translateY(-4px)}
+.photo-card::before{inset:auto -26px -26px auto;width:62%;height:62%;border-radius:32px;transform:none;opacity:1;
+  background:linear-gradient(135deg,rgba(59,130,246,.18),rgba(45,212,191,.22));filter:blur(2px)}
+.photo-card::after{content:"";position:absolute;top:-18px;left:-18px;width:90px;height:90px;z-index:-1;border-radius:20px;
+  background-image:radial-gradient(color-mix(in srgb,var(--primary) 55%,transparent) 1.4px,transparent 1.4px);background-size:12px 12px;opacity:.6}
+
+/* Chip melayang: kaca terang + ikon garis */
+.chip-float{background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-color:rgba(226,232,240,.9);
+  box-shadow:0 18px 40px -20px rgba(10,19,36,.35)}
+[data-theme="dark"] .chip-float{background:rgba(15,26,46,.85);border-color:var(--line)}
+.chip-float .ico{color:var(--primary);background:var(--chip-bg)}
+.chip-float .ico.gold{color:#b45309;background:#fef3c7}
+[data-theme="dark"] .chip-float .ico.gold{color:#fbbf24;background:rgba(251,191,36,.12)}
+.chip-float .ico .i{width:19px;height:19px}
+
+/* Ikon pilar, keahlian, sertifikat */
+.pillars .ic{background:var(--chip-bg);color:var(--primary);border:1px solid color-mix(in srgb,var(--primary) 18%,transparent)}
+.pillars .ic .i{width:20px;height:20px}
+.pillars div{transition:transform .3s var(--ease),border-color .3s}
+.pillars div:hover{transform:translateY(-3px);border-color:color-mix(in srgb,var(--primary) 40%,transparent)}
+.sg-ic .i{width:17px;height:17px}
+.c-ic{background:color-mix(in srgb,#10b981 14%,transparent);color:#059669}
+[data-theme="dark"] .c-ic{color:#34d399}
+.c-ic .i{width:15px;height:15px;stroke-width:2.4}
+.pill .i,.hl-tag .i{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:2px}
+.pill-blue{background:var(--chip-bg);color:var(--chip-text);border:1px solid color-mix(in srgb,var(--primary) 22%,transparent)}
+
+/* Bagian tint lebih lembut, sudut & ruang lebih lega */
+.section{padding:110px 0}
+.section.tint{background:linear-gradient(180deg,var(--bg-tint),color-mix(in srgb,var(--bg-tint) 40%,var(--bg)))}
+.card,.award,.tl-card,.skill-group,.tool,.doc{border-color:color-mix(in srgb,var(--line) 85%,transparent)}
+.card:hover,.award:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(36,87,230,.35)}
+.filters button.active,.pfilters button.active{background:var(--primary);box-shadow:0 8px 18px -10px rgba(36,87,230,.7)}
+.icon-thumb{background:linear-gradient(135deg,#e8efff 0%,#dff7fb 100%)}
+.icon-thumb,.cs-gallery.icon-thumb{color:var(--primary)}
+[data-theme="dark"] .icon-thumb{background:linear-gradient(135deg,#13234a,#0d2b35)}
+.cs-gallery.icon-thumb{background:linear-gradient(135deg,#e8efff 0%,#dff7fb 100%)}
+[data-theme="dark"] .cs-gallery.icon-thumb{background:linear-gradient(135deg,#13234a,#0d2b35)}
+.icon-thumb.alt{background:linear-gradient(135deg,#dff7fb 0%,#e8efff 100%)}
+.icon-thumb span{color:var(--primary);font-weight:600}
+[data-theme="dark"] .icon-thumb span{color:#a9bfff}
+.icon-thumb::after{background-image:radial-gradient(color-mix(in srgb,var(--primary) 22%,transparent) 1.2px,transparent 1.2px)}

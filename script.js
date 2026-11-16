@@ -118,7 +118,7 @@ const lbImg = lb.querySelector('img');
 const lbCap = lb.querySelector('figcaption');
 let list = [], idx = 0;
 function itemsOf(group) {
-  if (group === 'gallery') return figs.filter(f => !f.classList.contains('hide')).map(f => ({ src: f.querySelector('img').src, alt: f.querySelector('img').alt, cap: f.querySelector('figcaption').textContent }));
+  if (group === 'gallery') return figs.filter(f => !f.classList.contains('hide')).map(f => ({ src: f.querySelector('img').src, alt: f.querySelector('img').alt, cap: [...f.querySelector('figcaption').childNodes].map(n => n.textContent.trim()).filter(Boolean).join(' — ') }));
   if (group === 'docs') return [...document.querySelectorAll('.doc')].map(d => ({ src: d.dataset.full, alt: d.querySelector('img').alt, cap: d.querySelector('b').textContent }));
   return [...document.querySelectorAll('.tl-photos img')].map(i => ({ src: i.src, alt: i.alt, cap: i.dataset.cap }));
 }
