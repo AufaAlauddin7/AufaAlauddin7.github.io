@@ -1,21 +1,23 @@
 /* ============ TEMA ============ */
 :root,[data-theme="light"]{
-  --bg:#f5f8fc; --bg-tint:#eaf1fa; --surface:#ffffff; --surface-2:#f2f6fb;
-  --text:#0d1b2e; --muted:#5a6b82; --line:#dbe4ef; --line-strong:#c8d5e6;
-  --primary:#1d6fe0; --primary-2:#14b8a6; --gold:#e8a317;
-  --grad:linear-gradient(120deg,#1d6fe0 0%,#14b8a6 100%);
-  --shadow:0 1px 2px rgba(13,27,46,.04),0 8px 24px -12px rgba(13,27,46,.12);
-  --shadow-lg:0 24px 60px -28px rgba(13,27,46,.35);
-  --chip-bg:#e9f1fd; --chip-text:#1559b8;
+  --bg:#f6f7f9; --bg-tint:#eef1f6; --surface:#ffffff; --surface-2:#f3f5f9;
+  --text:#0a1324; --muted:#586477; --line:#e2e7ef; --line-strong:#cbd3df;
+  --primary:#2457e6; --primary-2:#0891b2; --gold:#d98a0b; --signal:#22d3ee;
+  --grad:linear-gradient(120deg,#2457e6 0%,#3b82f6 55%,#06b6d4 100%);
+  --shadow:0 1px 2px rgba(10,19,36,.04),0 8px 24px -14px rgba(10,19,36,.14);
+  --shadow-lg:0 28px 60px -30px rgba(10,19,36,.35);
+  --chip-bg:#eaf0fe; --chip-text:#1f47b8;
+  --ink:#08111f; --ink-2:#0d1a30;
 }
 [data-theme="dark"]{
-  --bg:#0b1322; --bg-tint:#0f1a2d; --surface:#121f35; --surface-2:#172742;
-  --text:#e9f0f9; --muted:#9aabc3; --line:#22344f; --line-strong:#2c4263;
-  --primary:#4c95ff; --primary-2:#2dd4bf; --gold:#f5b93a;
-  --grad:linear-gradient(120deg,#4c95ff 0%,#2dd4bf 100%);
-  --shadow:0 1px 2px rgba(0,0,0,.2),0 10px 30px -14px rgba(0,0,0,.6);
-  --shadow-lg:0 24px 60px -24px rgba(0,0,0,.8);
-  --chip-bg:#16304f; --chip-text:#8cbcff;
+  --bg:#070d18; --bg-tint:#0a1222; --surface:#0f1a2e; --surface-2:#13213a;
+  --text:#e8eef8; --muted:#94a3ba; --line:#1c2a44; --line-strong:#283a5b;
+  --primary:#6b8cff; --primary-2:#22d3ee; --gold:#f2b544; --signal:#22d3ee;
+  --grad:linear-gradient(120deg,#5b7cff 0%,#60a5fa 55%,#22d3ee 100%);
+  --shadow:0 1px 2px rgba(0,0,0,.25),0 10px 30px -14px rgba(0,0,0,.65);
+  --shadow-lg:0 28px 60px -26px rgba(0,0,0,.85);
+  --chip-bg:#14254a; --chip-text:#a9bfff;
+  --ink:#050a14; --ink-2:#0b1528;
 }
 :root{--radius:18px;--maxw:1180px;--ease:cubic-bezier(.2,.7,.2,1)}
 
@@ -40,7 +42,7 @@ strong{font-weight:700;color:var(--text)}
 .nav.scrolled{border-bottom-color:var(--line);box-shadow:0 6px 20px -16px rgba(13,27,46,.4)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700}
-.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--grad);color:#fff;font-weight:800;font-size:.86rem;box-shadow:0 6px 16px -6px rgba(29,111,224,.6)}
+.brand-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:11px;background:var(--grad);color:#fff;font-weight:800;font-size:.86rem;box-shadow:0 6px 16px -6px rgba(36,87,230,.6)}
 .nav-links{display:flex;gap:4px;align-items:center;font-size:.93rem;font-weight:500}
 .nav-links a{color:var(--muted);padding:8px 14px;border-radius:999px;transition:color .2s,background .2s}
 .nav-links a:hover{color:var(--text)}
@@ -61,8 +63,8 @@ strong{font-weight:700;color:var(--text)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:14px;font-weight:600;font-size:.96rem;transition:transform .2s var(--ease),box-shadow .3s,background .2s,border-color .2s}
 .btn:hover{transform:translateY(-2px)}
 .btn-sm{padding:9px 18px;border-radius:12px;font-size:.88rem}
-.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 24px -10px rgba(29,111,224,.7)}
-.btn-primary:hover{box-shadow:0 16px 32px -12px rgba(29,111,224,.8)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 10px 24px -10px rgba(36,87,230,.7)}
+.btn-primary:hover{box-shadow:0 16px 32px -12px rgba(36,87,230,.8)}
 .btn-outline{border:1.5px solid var(--line-strong);background:var(--surface);color:var(--text)}
 .btn-outline:hover{border-color:var(--primary);color:var(--primary)}
 .btn-white{background:#fff;color:#0d1b2e}
@@ -72,8 +74,8 @@ strong{font-weight:700;color:var(--text)}
 /* ============ HERO ============ */
 .hero{position:relative;overflow:hidden;padding:70px 0 60px}
 .blob{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
-.b-1{width:520px;height:520px;background:#1d6fe0;opacity:.14;right:-140px;top:-80px}
-.b-2{width:460px;height:460px;background:#14b8a6;opacity:.14;left:-180px;bottom:-160px}
+.b-1{width:520px;height:520px;background:#2457e6;opacity:.22;right:-140px;top:-80px}
+.b-2{width:460px;height:460px;background:#06b6d4;opacity:.16;left:-180px;bottom:-160px}
 [data-theme="dark"] .b-1,[data-theme="dark"] .b-2{opacity:.18}
 .dots{position:absolute;inset:0;background-image:radial-gradient(var(--line-strong) 1.2px,transparent 1.2px);background-size:26px 26px;opacity:.55;mask-image:radial-gradient(ellipse at 70% 30%,#000 0%,transparent 65%);-webkit-mask-image:radial-gradient(ellipse at 70% 30%,#000 0%,transparent 65%)}
 .hero-in{position:relative;display:grid;grid-template-columns:1.2fr .95fr;gap:60px;align-items:center}
@@ -188,7 +190,7 @@ strong{font-weight:700;color:var(--text)}
 .card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg)}
 .icon-thumb{display:grid;place-items:center;background:var(--grad);position:relative}
 .icon-thumb::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.25) 1.2px,transparent 1.2px);background-size:18px 18px}
-.icon-thumb.alt{background:linear-gradient(120deg,#0f766e,#1d6fe0)}
+.icon-thumb.alt{background:linear-gradient(120deg,#0e7490,#2457e6)}
 .icon-thumb span{position:relative;z-index:1;font-family:"JetBrains Mono",monospace;font-weight:500;font-size:2rem;color:#fff;letter-spacing:.04em}
 .card-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
 .card h3{font-size:1.06rem;margin-bottom:8px}
@@ -260,7 +262,7 @@ a.cert:hover{border-color:var(--primary)}
 .filters{display:flex;flex-wrap:wrap;gap:8px}
 .filters button{font:inherit;font-size:.86rem;font-weight:600;background:var(--surface);color:var(--muted);border:1px solid var(--line);padding:9px 16px;border-radius:999px;cursor:pointer;transition:all .2s}
 .filters button:hover{color:var(--text);border-color:var(--line-strong)}
-.filters button.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 8px 18px -10px rgba(29,111,224,.8)}
+.filters button.active{background:var(--grad);color:#fff;border-color:transparent;box-shadow:0 8px 18px -10px rgba(36,87,230,.8)}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;grid-auto-flow:dense;gap:14px}
 .gallery figure{position:relative;border-radius:16px;overflow:hidden;cursor:zoom-in;background:var(--surface-2);box-shadow:var(--shadow)}
 .gallery figure.wide{grid-column:span 2}
@@ -270,7 +272,7 @@ a.cert:hover{border-color:var(--primary)}
 .gallery figcaption{position:absolute;inset:auto 0 0 0;padding:30px 14px 12px;font-size:.82rem;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(5,12,24,.82))}
 
 /* ============ KONTAK ============ */
-.cta-box{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;background:var(--grad);border-radius:28px;padding:52px;color:#fff;position:relative;overflow:hidden;box-shadow:0 30px 70px -30px rgba(29,111,224,.7)}
+.cta-box{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:center;background:var(--grad);border-radius:28px;padding:52px;color:#fff;position:relative;overflow:hidden;box-shadow:0 30px 70px -30px rgba(36,87,230,.7)}
 .cta-box::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.18) 1.3px,transparent 1.3px);background-size:22px 22px;mask-image:linear-gradient(90deg,#000,transparent 70%);-webkit-mask-image:linear-gradient(90deg,#000,transparent 70%)}
 .cta-text{position:relative}
 .cta-text h2{margin-bottom:12px}
@@ -456,3 +458,53 @@ a.cert:hover{border-color:var(--primary)}
 @media (max-width:760px){.timeline::after{left:7px}.pcb{opacity:.6}}
 @media (prefers-reduced-motion:reduce){.pcb-sig,.timeline::after{display:none}}
 @media print{.pcb,.scope,.timeline::after{display:none!important}}
+
+
+/* ============ TEMA "PRESISI TEKNIK" ============ */
+/* Hero gelap bernuansa ruang kontrol, di kedua mode */
+.hero{--bg:#08111f;--surface:#0f1b31;--surface-2:#13223d;--text:#eef3fb;--muted:#9fb0c9;--line:#1d2c48;--line-strong:#2b3f63;
+  --chip-bg:#16264a;--chip-text:#b4c6ff;--primary:#7b9bff;
+  background:radial-gradient(1200px 600px at 85% -10%,#132a5c 0%,transparent 60%),radial-gradient(900px 500px at -10% 110%,#0b3346 0%,transparent 55%),linear-gradient(180deg,#08111f,#0a1528);
+  color:var(--text)}
+[data-theme="dark"] .hero{background:radial-gradient(1200px 600px at 85% -10%,#10234d 0%,transparent 60%),radial-gradient(900px 500px at -10% 110%,#082a3a 0%,transparent 55%),linear-gradient(180deg,#050a14,#08111f)}
+.hero h1{color:#fff}
+.hero .grad{background:linear-gradient(120deg,#8fb0ff 0%,#5cc8ff 55%,#22d3ee 100%);-webkit-background-clip:text;background-clip:text}
+.hero .dots{opacity:.35}
+.hero .pcb-tr path{opacity:.9}
+.hero .btn-outline{background:transparent;border-color:#2b3f63;color:#eef3fb}
+.hero .btn-outline:hover{border-color:#7b9bff;background:rgba(123,155,255,.08)}
+.hero .stats b{background:linear-gradient(120deg,#8fb0ff,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .photo-card::before{background:linear-gradient(135deg,#2457e6,#06b6d4);opacity:.35}
+.hero .status .dot{background:#22c55e}
+/* Navbar menyatu dengan hero gelap saat di puncak halaman */
+.nav:not(.scrolled){background:#08111f;border-bottom-color:rgba(255,255,255,.06)}
+[data-theme="dark"] .nav:not(.scrolled){background:#050a14}
+.nav:not(.scrolled) .brand{color:#e6edf8}
+@media (min-width:821px){.nav:not(.scrolled) .nav-links a{color:#c9d5e8}.nav:not(.scrolled) .nav-links a:hover,.nav:not(.scrolled) .nav-links a.active{background:rgba(255,255,255,.08);color:#fff}}
+.nav:not(.scrolled) .theme-toggle,.nav:not(.scrolled) .nav-toggle{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#e6edf8}
+
+/* Tombol utama: solid kobalt, bukan gradien penuh */
+.btn-primary{background:#2457e6;background-image:linear-gradient(180deg,rgba(255,255,255,.12),transparent)}
+.btn-primary:hover{background-color:#1d4ed8}
+[data-theme="dark"] .btn-primary,.hero .btn-primary{background-color:#3d6bff}
+
+/* Judul bagian: aksen sinyal */
+.kicker{color:var(--primary);font-family:"JetBrains Mono",ui-monospace,monospace;letter-spacing:.08em;font-weight:600}
+.kicker::before{background:var(--primary);box-shadow:0 0 8px color-mix(in srgb,var(--signal) 70%,transparent)}
+h2{letter-spacing:-.03em}
+
+/* Prestasi memakai aksen amber (indikator) */
+
+/* Kotak kontak: ink navy elegan dengan cahaya kobalt */
+.cta-box{background:radial-gradient(700px 360px at 100% 0%,rgba(61,107,255,.45),transparent 60%),radial-gradient(500px 300px at 0% 100%,rgba(6,182,212,.28),transparent 60%),linear-gradient(135deg,#0a1530,#08111f);
+  box-shadow:0 30px 70px -30px rgba(8,17,31,.75);border:1px solid #1d2c48}
+.cta-box .scope{opacity:.3}
+.cta-box .scope path{stroke:#7dd3fc}
+
+/* Strip keahlian lebih tenang */
+.strip{background:var(--surface)}
+.strip-track i{background:var(--primary);border-radius:1px}
+
+/* Progress bar & seleksi */
+::selection{background:color-mix(in srgb,var(--primary) 25%,transparent)}
+img[src*="digital-twin-konveyor"]{object-fit:contain;background:#fff}

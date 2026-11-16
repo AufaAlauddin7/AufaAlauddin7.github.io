@@ -262,7 +262,7 @@
             </div>
           </article>
           <article class="card" data-cat="auto" data-p="twin" tabindex="0">
-            <div class="thumb icon-thumb"><span>TWIN</span></div>
+            <div class="thumb"><img src="assets/img/digital-twin-konveyor.jpg" alt="Kontroler konveyor untuk digital twin" loading="lazy" /></div>
             <div class="card-body">
               <span class="card-meta">2026 · Digital twin · PCB custom</span>
               <h3>Kontroler konveyor untuk digital twin</h3>
@@ -410,16 +410,16 @@
     <dl class="specs"><div><dt>MCU</dt><dd>ESP32 DevKit</dd></div><div><dt>Modul</dt><dd>14+ sensor &amp; aktuator</dd></div><div><dt>Fokus</dt><dd>Praktikum IoT &amp; embedded</dd></div></dl>
   </div></div></template>
 <template id="tp-twin"><div class="cs">
-  <div class="cs-gallery icon-thumb big"><span>TWIN</span></div>
+  <div class="cs-gallery n1"><img src="assets/img/digital-twin-konveyor.jpg" alt="Kontroler konveyor untuk digital twin" loading="lazy" /></div>
   <div class="cs-body">
     <span class="pill">Digital twin · PCB custom · 2026</span>
     <h3>Kontroler konveyor untuk digital twin</h3>
     <div class="cs-grid">
       <div class="cs-step"><b>Masalah</b><p>Model digital twin konveyor butuh data fisik yang akurat dan perintah yang andal dari PC.</p></div>
       <div class="cs-step"><b>Solusi</b><p>Motor DC 25GA370 dikendalikan L298N dengan PWM 20 kHz dan PID RPM, encoder dibaca lewat PCNT, arus lewat ACS712, dan 4 IMU MPU6050 lewat multiplexer PCA9548A. Komunikasi memakai frame biner [0xAA][CMD][LEN][DATA][CRC8].</p></div>
-      <div class="cs-step"><b>Hasil</b><p>Mendukung mode open-loop/PID, deteksi stall dan overcurrent, heartbeat watchdog, serta indikator status RGB.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Terintegrasi dalam satu stasiun: konveyor, kamera, lengan uArm Swift Pro, loadcell, IMU, box collection, dan control box. Firmware mendukung mode open-loop/PID, deteksi stall dan overcurrent, heartbeat watchdog, serta indikator status RGB.</p></div>
     </div>
-    <dl class="specs"><div><dt>MCU</dt><dd>ESP32-S3</dd></div><div><dt>Kontrol</dt><dd>PID RPM · PWM 20 kHz</dd></div><div><dt>Sensor</dt><dd>Encoder · ACS712 · 4× MPU6050</dd></div><div><dt>Protokol</dt><dd>Frame biner + CRC8</dd></div></dl>
+    <dl class="specs"><div><dt>MCU</dt><dd>ESP32-S3</dd></div><div><dt>Kontrol</dt><dd>PID RPM · PWM 20 kHz</dd></div><div><dt>Sensor</dt><dd>Encoder · ACS712 · 4× MPU6050</dd></div><div><dt>Protokol</dt><dd>Frame biner + CRC8</dd></div><div><dt>Stasiun</dt><dd>Kamera · uArm Swift Pro · loadcell</dd></div></dl>
   </div></div></template>
 <template id="tp-uvc"><div class="cs">
   <div class="cs-gallery icon-thumb big"><span>UV-C</span></div>
