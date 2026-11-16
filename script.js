@@ -169,3 +169,50 @@ document.querySelectorAll('[data-p]').forEach(el=>{
 pm.querySelector('.pm-close').addEventListener('click',closeProject);
 pm.addEventListener('click',e=>{if(e.target===pm)closeProject();});
 document.addEventListener('keydown',e=>{if(!pm.hidden&&e.key==='Escape')closeProject();});
+
+// ===== Animasi elektro: stagger, sorotan kartu, timeline beraliran =====
+(() => {
+  // Muncul berurutan: elemen saudara dalam satu grid diberi jeda bertahap
+  document.querySelectorAll('.reveal').forEach(el => {
+    const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal'));
+    const i = sibs.indexOf(el);
+    if (i > 0) el.style.setProperty('--d', Math.min(i, 6) * 0.07 + 's');
+  });
+
+  // Sorotan kursor + bingkai bercahaya (hanya perangkat dengan mouse)
+  if (window.matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce) {
+    document.querySelectorAll('.card, .featured, .award, .tool, .doc, .skill-group').forEach(el => {
+      el.classList.add('glow');
+      el.addEventListener('pointermove', e => {
+        const r = el.getBoundingClientRect();
+        el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
+  }
+
+  // Garis timeline terisi mengikuti scroll, titik menyala saat dilewati
+  const tl = document.querySelector('.timeline');
+  if (tl) {
+    const items = [...tl.querySelectorAll('.tl')];
+    let ticking = false;
+    const update = () => {
+      ticking = false;
+      const r = tl.getBoundingClientRect(), mid = window.innerHeight * 0.6;
+      const p = Math.max(0, Math.min(1, (mid - r.top) / r.height));
+      tl.style.setProperty('--tl', p.toFixed(3));
+      items.forEach(it => it.classList.toggle('lit', it.getBoundingClientRect().top + 30 < mid));
+    };
+    window.addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    update();
+  }
+
+  // Hentikan animasi latar saat tidak terlihat (hemat baterai)
+  if ('IntersectionObserver' in window) {
+    const pause = new IntersectionObserver(es => es.forEach(e => {
+      e.target.style.animationPlayState = '';
+      e.target.querySelectorAll('.pcb-sig path, .scope-mv').forEach(n => n.style.animationPlayState = e.isIntersecting ? 'running' : 'paused');
+    }));
+    document.querySelectorAll('.hero, .cta-box').forEach(n => pause.observe(n));
+  }
+})();

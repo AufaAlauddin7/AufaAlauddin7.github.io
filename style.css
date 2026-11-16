@@ -409,3 +409,50 @@ a.cert:hover{border-color:var(--primary)}
 @media (max-width:640px){.cs-gallery img{height:220px}.cs-gallery.n2{grid-template-columns:1fr}.cs-body{padding:22px}.more-projects{grid-template-columns:1fr}.pmodal{padding:10px}}
 @media print{.pmodal{display:none!important}}
 .cs-gallery.icon-thumb{background:var(--grad);display:grid;place-items:center;position:relative}
+
+/* ============ ANIMASI ELEKTRO ============ */
+/* Jalur PCB + sinyal di hero */
+.pcb{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;
+  mask-image:linear-gradient(90deg,#000 0,transparent 24%,transparent 76%,#000 100%);
+  -webkit-mask-image:linear-gradient(90deg,#000 0,transparent 24%,transparent 76%,#000 100%)}
+.pcb path,.pcb circle{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.pcb-tr path{stroke:var(--line-strong);stroke-width:2;opacity:.7}
+.pcb-pad circle{stroke:var(--line-strong);stroke-width:2;fill:var(--bg)}
+.pcb-sig path{stroke:var(--primary-2);stroke-width:2.6;stroke-dasharray:5 95;stroke-dashoffset:100;
+  filter:drop-shadow(0 0 4px var(--primary-2));animation:sig linear infinite}
+.pcb-sig path:nth-child(even){stroke:var(--primary);filter:drop-shadow(0 0 4px var(--primary))}
+@keyframes sig{to{stroke-dashoffset:0}}
+
+/* Garis bawah judul seperti sinyal yang menyapu */
+.sec-head .kicker::before,.about .kicker::before{transform-origin:left;transition:transform .9s var(--ease) .15s}
+.sec-head.reveal:not(.in) .kicker::before{transform:scaleX(0)}
+
+/* Muncul berurutan dalam grid */
+.reveal{transition-delay:var(--d,0s)}
+
+/* Kartu: sorotan mengikuti kursor + bingkai bercahaya */
+.card,.featured,.award,.tool,.doc,.skill-group{position:relative}
+.glow::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--primary) 13%,transparent),transparent 45%)}
+.glow::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;pointer-events:none;opacity:0;transition:opacity .35s;z-index:2;
+  background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),var(--primary-2),var(--primary) 40%,transparent 70%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.glow:hover::after,.glow:hover::before{opacity:1}
+
+/* Timeline: garis "teraliri arus" saat di-scroll */
+.timeline::after{content:"";position:absolute;left:170px;top:8px;width:2px;height:calc((100% - 16px) * var(--tl,0));
+  background:var(--grad);box-shadow:0 0 10px var(--primary-2);border-radius:2px;transition:height .15s linear}
+.tl::before{z-index:1;transition:background .4s,box-shadow .4s}
+.tl.lit::before{background:var(--primary-2);border-color:var(--primary-2);box-shadow:0 0 0 5px color-mix(in srgb,var(--primary-2) 22%,transparent)}
+
+/* Gelombang osiloskop di kontak */
+.scope{position:absolute;right:0;bottom:0;width:100%;height:38%;pointer-events:none;opacity:.26;mask-image:linear-gradient(90deg,transparent,#000 35%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 35%)}
+.scope-mv{animation:scope 9s linear infinite}
+.scope path{fill:none;stroke:#fff;stroke-width:2.2;vector-effect:non-scaling-stroke}
+.scope .w2{opacity:.55;stroke-width:1.6}
+@keyframes scope{to{transform:translateX(-600px)}}
+.cta-box>*:not(.scope){position:relative;z-index:1}
+
+@media (max-width:760px){.timeline::after{left:7px}.pcb{opacity:.6}}
+@media (prefers-reduced-motion:reduce){.pcb-sig,.timeline::after{display:none}}
+@media print{.pcb,.scope,.timeline::after{display:none!important}}
