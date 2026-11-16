@@ -123,7 +123,7 @@
           </div>
           <div class="chip-float c1"><span class="ico gold"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></span><div><b>Juara Umum</b><small>KRTI 2026 · Bayucaraka ITS</small></div></div>
           <div class="chip-float c2"><span class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="1.5"/><path d="M10 10h4v4h-4zM9 3v4M15 3v4M9 17v4M15 17v4M3 9h4M3 15h4M17 9h4M17 15h4"/></svg></span><div><b>Asisten Lab</b><small>Microelectronics &amp; Embedded</small></div></div>
-          <div class="chip-float c3"><span class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 13.5 21 6.5l-3.5 13-5-5.5-4 4v-5.5Z"/><path d="m12.5 14 5-7.5"/></svg></span><div><b>Flight Controller</b><small>STM32H753 + F405</small></div></div>
+          <div class="chip-float c3"><span class="ico"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 13.5 21 6.5l-3.5 13-5-5.5-4 4v-5.5Z"/><path d="m12.5 14 5-7.5"/></svg></span><div><b>AXIOM Lynx FC</b><small>STM32H753 + F405 · KRTI 2026</small></div></div>
         </div>
       </div>
 
@@ -230,12 +230,12 @@
           <p class="sec-sub">Klik proyek untuk melihat studi kasusnya: masalah, solusi, dan hasil.</p>
         </div>
         <article class="featured" data-p="fc" tabindex="0">
-          <div class="feat-media n2"><img src="assets/img/krti2026-flighttest.jpg" alt="Flight controller custom dual-MCU" loading="lazy" /><img src="assets/img/krti2025-plane.jpg" alt="Flight controller custom dual-MCU" loading="lazy" /></div>
+          <div class="feat-media n2"><img src="assets/img/fc-axiom-pcb.jpg" alt="AXIOM Lynx — flight controller dual-MCU" loading="lazy" /><img src="assets/img/krti2026-launching.jpg" alt="AXIOM Lynx — flight controller dual-MCU" loading="lazy" /></div>
           <div class="feat-body">
-            <span class="pill pill-blue"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.1l-5.62 2.96 1.07-6.27L2.9 9.4l6.3-.9Z"/></svg> Unggulan · Bayucaraka ITS · KRTI 2026</span>
-            <h3>Flight controller custom dual-MCU</h3>
-            <p>Flight controller rancangan sendiri untuk pesawat tim Bayucaraka ITS, dari skematik sampai fabrikasi.</p>
-            <dl class="specs"><div><dt>MCU</dt><dd>STM32H753 + STM32F405</dd></div><div><dt>Lingkup</dt><dd>Skematik → PCB → BOM → fabrikasi</dd></div><div><dt>Protokol</dt><dd>UART · I²C · SPI</dd></div><div><dt>Peran</dt><dd>Electrical engineer</dd></div></dl>
+            <span class="pill pill-blue"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.1l-5.62 2.96 1.07-6.27L2.9 9.4l6.3-.9Z"/></svg> Unggulan · Bayucaraka ITS · KRTI 2026 Divisi TD</span>
+            <h3>AXIOM Lynx — flight controller dual-MCU</h3>
+            <p>Flight controller rancangan sendiri untuk pesawat Bayucaraka ITS di KRTI 2026 divisi Technology Development, dari skematik sampai PCB jadi.</p>
+            <dl class="specs"><div><dt>MCU</dt><dd>STM32H753 + STM32F405</dd></div><div><dt>Arsitektur</dt><dd>FCC (flight control) + NAVC (navigasi)</dd></div><div><dt>I/O</dt><dd>2× USB-C · UART · I²C · RCIN · GPS · 12 output PWM</dd></div><div><dt>Tools</dt><dd>EasyEDA → JLCPCB</dd></div></dl>
             <span class="more-link">Lihat studi kasus →</span>
           </div>
         </article>
@@ -261,6 +261,26 @@
         </article>
         <div class="filters pfilters"><button class="active" data-pf="all">Semua</button><button class="" data-pf="uav">UAV</button><button class="" data-pf="iot">Embedded & IoT</button><button class="" data-pf="auto">Otomasi & kontrol</button><button class="" data-pf="akad">Akademik</button></div>
         <div class="cards">
+          <article class="card" data-cat="iot" data-p="rs485" tabindex="0">
+            <div class="thumb"><img src="assets/img/pcb-gw-s32e-485.jpg" alt="Seri board komunikasi industri RS485 &amp; Ethernet" loading="lazy" /></div>
+            <div class="card-body">
+              <span class="card-meta">2026 · Desain PCB · komunikasi industri</span>
+              <h3>Seri board komunikasi industri RS485 &amp; Ethernet</h3>
+              <p>Tiga PCB custom untuk jaringan komunikasi panel industri: gateway dual-MCU RS485, node IoT Ethernet bertenaga AC, dan hub komunikasi panel.</p>
+              <div class="chips"><span>ESP32</span><span>STM32</span><span>RS485</span><span>Ethernet</span><span>PCB design</span></div>
+              <span class="more-link">Detail →</span>
+            </div>
+          </article>
+          <article class="card" data-cat="uav" data-p="airo" tabindex="0">
+            <div class="thumb"><img src="assets/img/airo-alur-kerja.jpg" alt="Drone keamanan pendeteksi kepatuhan APD" loading="lazy" /></div>
+            <div class="card-body">
+              <span class="card-meta">2025 · AIRO Team · Smart System (IoT)</span>
+              <h3>Drone keamanan pendeteksi kepatuhan APD</h3>
+              <p>Drone patroli yang memantau area kerja industri dan memakai AI (Gemini) untuk mengecek apakah pekerja memakai helm, rompi, dan masker.</p>
+              <div class="chips"><span>Python</span><span>Gemini AI</span><span>Drone</span><span>Flask</span></div>
+              <span class="more-link">Detail →</span>
+            </div>
+          </article>
           <article class="card" data-cat="iot" data-p="trainer" tabindex="0">
             <div class="thumb"><img src="assets/img/trainer-kit-esp32-v2.jpg" alt="Trainer kit ESP32 untuk praktikum" loading="lazy" /></div>
             <div class="card-body">
@@ -374,16 +394,16 @@
         </div>
         <div class="more-projects"><div><b>Smart UV &amp; LED controller</b><span>ESP32-C3 · web AP · timer · Preferences</span></div><div><b>Encoder rotary → stepper</b><span>ESP32 · interrupt · driver stepper</span></div><div><b>Mobil robot pendeteksi gas</b><span>MQ-7 · BTS7960 · ESP-NOW → ESP8266</span></div><div><b>Sistem ventilasi otomatis</b><span>Arduino Uno · DHT22 · MQ-7</span></div><div><b>Lengan robot 5 DOF pengaduk teh</b><span>Tugas akhir SMK · Arduino · servo</span></div><div><b>Web LED controller praktikum</b><span>ESP32 · WebServer · mode auto/manual</span></div></div>
 <template id="tp-fc"><div class="cs">
-  <div class="cs-gallery n2"><img src="assets/img/krti2026-flighttest.jpg" alt="Flight controller custom dual-MCU" loading="lazy" /><img src="assets/img/krti2025-plane.jpg" alt="Flight controller custom dual-MCU" loading="lazy" /></div>
+  <div class="cs-gallery n4"><img src="assets/img/fc-axiom-pcb.jpg" alt="AXIOM Lynx — flight controller dual-MCU" loading="lazy" /><img src="assets/img/krti2026-launching.jpg" alt="AXIOM Lynx — flight controller dual-MCU" loading="lazy" /><img src="assets/img/fc-axiom-layout.jpg" alt="AXIOM Lynx — flight controller dual-MCU" loading="lazy" /><img src="assets/img/krti2026-flighttest.jpg" alt="AXIOM Lynx — flight controller dual-MCU" loading="lazy" /></div>
   <div class="cs-body">
-    <span class="pill">Bayucaraka ITS · KRTI 2026 · 2025–2026</span>
-    <h3>Flight controller custom dual-MCU</h3>
+    <span class="pill">Bayucaraka ITS · KRTI 2026 Divisi TD · 2025–2026</span>
+    <h3>AXIOM Lynx — flight controller dual-MCU</h3>
     <div class="cs-grid">
-      <div class="cs-step"><b>Masalah</b><p>Tim butuh flight controller yang bisa disesuaikan dengan kebutuhan misi KRTI, bukan sekadar board komersial siap pakai.</p></div>
-      <div class="cs-step"><b>Solusi</b><p>Merancang flight controller dual-MCU STM32H753 + STM32F405: skematik, layout PCB, penyusunan BOM, sampai fabrikasi, lalu integrasi dengan sistem kelistrikan pesawat.</p></div>
-      <div class="cs-step"><b>Hasil</b><p>Dipakai di pesawat tim pada KRTI 2026, saat Bayucaraka ITS meraih Juara Umum dan Juara Harapan 1 divisi Technology Development.</p></div>
+      <div class="cs-step"><b>Masalah</b><p>Tim butuh flight controller yang bisa disesuaikan dengan kebutuhan misi KRTI divisi Technology Development, bukan sekadar board komersial siap pakai.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Merancang AXIOM Lynx dengan dua MCU STM32 (H753 + F405) yang membagi peran flight control (FCC) dan navigasi (NAVC). Saya mengerjakan skematik, layout PCB di EasyEDA, BOM, dan fabrikasi di JLCPCB, lengkap dengan 2 USB-C, port UART/I²C/RCIN/GPS per MCU, 12 output PWM, dan test point.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Board dirakit dan diperkenalkan saat Grand Launching tim KRTI 2026, lalu dipakai di pesawat tim. Bayucaraka ITS meraih Juara Umum dan Juara Harapan 1 divisi Technology Development KRTI 2026.</p></div>
     </div>
-    <dl class="specs"><div><dt>MCU</dt><dd>STM32H753 + STM32F405</dd></div><div><dt>Lingkup</dt><dd>Skematik → PCB → BOM → fabrikasi</dd></div><div><dt>Protokol</dt><dd>UART · I²C · SPI</dd></div><div><dt>Peran</dt><dd>Electrical engineer</dd></div></dl>
+    <dl class="specs"><div><dt>MCU</dt><dd>STM32H753 + STM32F405</dd></div><div><dt>Arsitektur</dt><dd>FCC (flight control) + NAVC (navigasi)</dd></div><div><dt>I/O</dt><dd>2× USB-C · UART · I²C · RCIN · GPS · 12 output PWM</dd></div><div><dt>Tools</dt><dd>EasyEDA → JLCPCB</dd></div><div><dt>Peran</dt><dd>Electrical engineer, desainer PCB</dd></div></dl>
   </div></div></template>
 <template id="tp-fast"><div class="cs">
   <div class="cs-gallery n1"><img src="assets/img/fast-sorter.jpg" alt="FAST — Flexible Auto Sorter (Quekit)" loading="lazy" /></div>
@@ -408,6 +428,30 @@
       <div class="cs-step"><b>Hasil</b><p>Panel konveyor terpasang dengan label kabel rapi dan siap dioperasikan; mesin CNC KDT tetap berjalan untuk produksi woodworking.</p></div>
     </div>
     <dl class="specs"><div><dt>Lokasi</dt><dd>PT Suryamasinka · Gresik</dd></div><div><dt>CNC</dt><dd>Servo drive · PSU · wiring sinyal</dd></div><div><dt>Konveyor</dt><dd>Kontaktor · TOR · relay · inverter</dd></div><div><dt>Beban</dt><dd>Motor 3 fasa</dd></div></dl>
+  </div></div></template>
+<template id="tp-rs485"><div class="cs">
+  <div class="cs-gallery n3"><img src="assets/img/pcb-gw-s32e-485.jpg" alt="Seri board komunikasi industri RS485 &amp; Ethernet" loading="lazy" /><img src="assets/img/pcb-pch-e32-2w55-485.jpg" alt="Seri board komunikasi industri RS485 &amp; Ethernet" loading="lazy" /><img src="assets/img/pcb-cm-e32-w55-ac.jpg" alt="Seri board komunikasi industri RS485 &amp; Ethernet" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Desain PCB · komunikasi industri · 2026</span>
+    <h3>Seri board komunikasi industri RS485 &amp; Ethernet</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Panel dan perangkat lapangan butuh jalur komunikasi RS485 dan Ethernet yang andal, mudah dipasang, dan terlindungi dari gangguan listrik.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>GW-S32E-485 (DualCore RS485 Gateway): STM32F103 + ESP32-WROOM-32UE, USB-serial CP2102N, 2 kanal RS485 (SN75176 + 74HC04), regulator AMS1117-3.3, proteksi TVS + PTC fuse. CM-E32-W55-AC (IoT Ethernet Node): ESP32 + Ethernet W5500 dengan catu AC-DC HLK-10M05 (220 V AC → 5 V) sehingga bisa langsung dicolok ke listrik. PCH-E32-2W55-485 (Panel Communication Hub): ESP32 dengan 2 port Ethernet W5500 dan 1 kanal RS485 berujung dua konektor IDC untuk daisy-chain.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Tiga desain PCB siap fabrikasi dengan penamaan kode yang konsisten, dan bisa dipakai sebagai keluarga perangkat untuk monitoring dan kontrol panel lewat RS485 maupun Ethernet.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Gateway</dt><dd>STM32F103 + ESP32 · 2× RS485</dd></div><div><dt>Node IoT</dt><dd>ESP32 + W5500 · HLK-10M05 220 V AC</dd></div><div><dt>Hub panel</dt><dd>ESP32 + 2× W5500 · RS485 IDC daisy-chain</dd></div><div><dt>Interface</dt><dd>CP2102N USB-serial · SN75176 + 74HC04</dd></div><div><dt>Proteksi</dt><dd>TVS · PTC fuse · AMS1117-3.3</dd></div></dl>
+  </div></div></template>
+<template id="tp-airo"><div class="cs">
+  <div class="cs-gallery n2"><img src="assets/img/airo-alur-kerja.jpg" alt="Drone keamanan pendeteksi kepatuhan APD" loading="lazy" /><img src="assets/img/airo-dashboard.jpg" alt="Drone keamanan pendeteksi kepatuhan APD" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">AIRO Team · Smart System (IoT) · 2025</span>
+    <h3>Drone keamanan pendeteksi kepatuhan APD</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Pengawasan APD di area industri masih manual: petugas terbatas, mudah lelah, dan pelanggaran tidak terlaporkan secara real-time.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Drone E99 Pro dikendalikan server Python lewat payload UDP hasil analisis traffic (PCAPdroid). Video RTSP diolah OpenCV dan dianalisis Gemini 2.0 Flash. Dashboard Flask menampilkan live stream dan riwayat, hasil disimpan di database SQL, dan pelanggaran dikirim lewat WhatsApp.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Sistem diuji end-to-end: drone bergerak sesuai misi analisis area, video tampil di dashboard, AI menilai kepatuhan APD, dan riwayat deteksi bisa diunduh.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Hardware</dt><dd>Drone E99 Pro · laptop server lokal</dd></div><div><dt>Software</dt><dd>Python · Flask · OpenCV · Scapy</dd></div><div><dt>AI</dt><dd>Gemini 2.0 Flash API</dd></div><div><dt>Data</dt><dd>SQLite / MySQL · notifikasi WhatsApp</dd></div><div><dt>Tim</dt><dd>4 mahasiswa DTEO ITS</dd></div></dl>
   </div></div></template>
 <template id="tp-trainer"><div class="cs">
   <div class="cs-gallery n1"><img src="assets/img/trainer-kit-esp32-v2.jpg" alt="Trainer kit ESP32 untuk praktikum" loading="lazy" /></div>
