@@ -179,7 +179,7 @@
           <p class="sec-sub">Hasil kerja tim dan individu di tingkat kampus hingga nasional.</p>
         </div>
         <article class="award-hero">
-          <img src="assets/img/krti2026-team.jpg" alt="Tim Bayucaraka ITS di malam penganugerahan KRTI 2026" loading="lazy" />
+          <div class="ah-media"><img class="ah-main" src="assets/img/krti2026-stage.jpg" alt="Tim Bayucaraka ITS di panggung juara KRTI 2026" loading="lazy" /><img class="ah-inset" src="assets/img/krti2026-team.jpg" alt="Tim Bayucaraka ITS di malam penganugerahan KRTI 2026" loading="lazy" /></div>
           <div class="award-hero-body">
             <span class="pill pill-gold">2026 · Nasional</span>
             <h3>Juara Umum KRTI 2026 &amp; Juara Harapan 1 Divisi Technology Development</h3>
@@ -189,7 +189,7 @@
         </article>
         <div class="awards">
           <article class="award">
-            <div class="thumb"><img src="assets/img/krti2025-trophy.jpg" alt="Piala Juara 2 KRTI 2025" loading="lazy" /></div>
+            <div class="thumb"><img src="assets/img/krti2025-award.jpg" alt="Juara 2 Technology Development KRTI 2025" loading="lazy" style="object-position:center 35%" /></div>
             <div class="award-body">
               <span class="pill">2025 · Nasional</span>
               <h3>Juara 2 KRTI 2025 — Technology Development</h3>
@@ -246,6 +246,16 @@
             <h3>FAST — Flexible Auto Sorter (Quekit)</h3>
             <p>Tempat sampah pintar yang memilah sampah organik/anorganik otomatis dengan multi-sensor, disinfeksi UV + mist, suara, dan dashboard web.</p>
             <dl class="specs"><div><dt>Kontroler</dt><dd>ESP32 (PlatformIO, Arduino)</dd></div><div><dt>Sensor</dt><dd>IR · kapasitif · induktif · LDR · HC-SR04</dd></div><div><dt>Aktuator</dt><dd>Servo gerbang · relay UV · mist spray</dd></div><div><dt>Lainnya</dt><dd>DFPlayer Mini · INA219 · web server + REST API</dd></div></dl>
+            <span class="more-link">Lihat studi kasus →</span>
+          </div>
+        </article>
+        <article class="featured" data-p="panel" tabindex="0">
+          <div class="feat-media n2"><img src="assets/img/magang-cnc-cabinet.jpg" alt="Panel listrik CNC &amp; konveyor (industri)" loading="lazy" /><img src="assets/img/magang-panel-konveyor.jpg" alt="Panel listrik CNC &amp; konveyor (industri)" loading="lazy" /></div>
+          <div class="feat-body">
+            <span class="pill pill-blue"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.1l-5.62 2.96 1.07-6.27L2.9 9.4l6.3-.9Z"/></svg> Unggulan · Magang industri</span>
+            <h3>Panel listrik CNC &amp; konveyor (industri)</h3>
+            <p>Maintenance panel listrik mesin CNC dengan servo drive, serta merancang dan merakit panel kontrol konveyor saat magang di PT Suryamasinka Semestaraya.</p>
+            <dl class="specs"><div><dt>Lokasi</dt><dd>PT Suryamasinka · Gresik</dd></div><div><dt>CNC</dt><dd>Servo drive · PSU · wiring sinyal</dd></div><div><dt>Konveyor</dt><dd>Kontaktor · TOR · relay · inverter</dd></div><div><dt>Beban</dt><dd>Motor 3 fasa</dd></div></dl>
             <span class="more-link">Lihat studi kasus →</span>
           </div>
         </article>
@@ -341,16 +351,6 @@
               <span class="more-link">Detail →</span>
             </div>
           </article>
-          <article class="card" data-cat="auto" data-p="panel" tabindex="0">
-            <div class="thumb"><img src="assets/img/magang-panel-konveyor.jpg" alt="Panel listrik konveyor (industri)" loading="lazy" /></div>
-            <div class="card-body">
-              <span class="card-meta">2022 · Magang industri</span>
-              <h3>Panel listrik konveyor (industri)</h3>
-              <p>Merancang dan merakit panel kontrol konveyor saat magang di PT Suryamasinka Semestaraya.</p>
-              <div class="chips"><span>Panel</span><span>3 fasa</span><span>Inverter</span></div>
-              <span class="more-link">Detail →</span>
-            </div>
-          </article>
           <article class="card" data-cat="auto" data-p="jaka" tabindex="0">
             <div class="thumb"><img src="assets/img/lab-dteo-robot.jpg" alt="Lengan robot JAKA Zu5 &amp; digital twin uArm" loading="lazy" /></div>
             <div class="card-body">
@@ -396,6 +396,18 @@
       <div class="cs-step"><b>Hasil</b><p>Dashboard web di ESP32 (SPIFFS) menampilkan klasifikasi real-time, level baterai, status penuh, dan halaman kalibrasi; mode bisa diganti lewat web tanpa upload ulang firmware.</p></div>
     </div>
     <dl class="specs"><div><dt>Kontroler</dt><dd>ESP32 (PlatformIO, Arduino)</dd></div><div><dt>Sensor</dt><dd>IR · kapasitif · induktif · LDR · HC-SR04</dd></div><div><dt>Aktuator</dt><dd>Servo gerbang · relay UV · mist spray</dd></div><div><dt>Lainnya</dt><dd>DFPlayer Mini · INA219 · web server + REST API</dd></div></dl>
+  </div></div></template>
+<template id="tp-panel"><div class="cs">
+  <div class="cs-gallery n2"><img src="assets/img/magang-cnc-cabinet.jpg" alt="Panel listrik CNC &amp; konveyor (industri)" loading="lazy" /><img src="assets/img/magang-panel-konveyor.jpg" alt="Panel listrik CNC &amp; konveyor (industri)" loading="lazy" /></div>
+  <div class="cs-body">
+    <span class="pill">Magang industri · 2022</span>
+    <h3>Panel listrik CNC &amp; konveyor (industri)</h3>
+    <div class="cs-grid">
+      <div class="cs-step"><b>Masalah</b><p>Mesin CNC dan konveyor produksi butuh panel kontrol yang rapi, aman, dan mudah dirawat agar produksi tidak berhenti.</p></div>
+      <div class="cs-step"><b>Solusi</b><p>Maintenance kabinet CNC (power supply, servo drive, wiring sinyal), serta wiring panel konveyor: kontaktor, overload relay, relay MY4N, terminal R-S-T, motor 3 fasa, dan setting inverter.</p></div>
+      <div class="cs-step"><b>Hasil</b><p>Panel konveyor terpasang dengan label kabel rapi dan siap dioperasikan; mesin CNC KDT tetap berjalan untuk produksi woodworking.</p></div>
+    </div>
+    <dl class="specs"><div><dt>Lokasi</dt><dd>PT Suryamasinka · Gresik</dd></div><div><dt>CNC</dt><dd>Servo drive · PSU · wiring sinyal</dd></div><div><dt>Konveyor</dt><dd>Kontaktor · TOR · relay · inverter</dd></div><div><dt>Beban</dt><dd>Motor 3 fasa</dd></div></dl>
   </div></div></template>
 <template id="tp-trainer"><div class="cs">
   <div class="cs-gallery n1"><img src="assets/img/trainer-kit-esp32-v2.jpg" alt="Trainer kit ESP32 untuk praktikum" loading="lazy" /></div>
@@ -504,18 +516,6 @@
       <div class="cs-step"><b>Hasil</b><p>Contoh perintah seperti &quot;arahkan servo ke 90 derajat&quot; atau &quot;tulis aufa di OLED&quot; langsung dieksekusi hardware.</p></div>
     </div>
     <dl class="specs"><div><dt>MCU</dt><dd>ESP32</dd></div><div><dt>Input</dt><dd>INMP441 (I²S)</dd></div><div><dt>Output</dt><dd>Servo · OLED · WS2812 · buzzer · relay</dd></div></dl>
-  </div></div></template>
-<template id="tp-panel"><div class="cs">
-  <div class="cs-gallery n1"><img src="assets/img/magang-panel-konveyor.jpg" alt="Panel listrik konveyor (industri)" loading="lazy" /></div>
-  <div class="cs-body">
-    <span class="pill">Magang industri · 2022</span>
-    <h3>Panel listrik konveyor (industri)</h3>
-    <div class="cs-grid">
-      <div class="cs-step"><b>Masalah</b><p>Konveyor produksi butuh panel kontrol yang rapi, aman, dan mudah dirawat.</p></div>
-      <div class="cs-step"><b>Solusi</b><p>Wiring kontaktor, overload relay, relay MY4N, terminal R-S-T, motor 3 fasa, dan setting inverter.</p></div>
-      <div class="cs-step"><b>Hasil</b><p>Panel terpasang dengan label kabel rapi dan siap dioperasikan.</p></div>
-    </div>
-    <dl class="specs"><div><dt>Komponen</dt><dd>Kontaktor · TOR · relay · inverter</dd></div><div><dt>Beban</dt><dd>Motor 3 fasa</dd></div></dl>
   </div></div></template>
 <template id="tp-jaka"><div class="cs">
   <div class="cs-gallery n1"><img src="assets/img/lab-dteo-robot.jpg" alt="Lengan robot JAKA Zu5 &amp; digital twin uArm" loading="lazy" /></div>
@@ -736,12 +736,12 @@
           </div>
         </div>
         <div class="gallery">
-          <figure data-cat="krti" class="hl big"><span class="hl-tag"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.7 6.3.9-4.55 4.43 1.07 6.27L12 17.1l-5.62 2.96 1.07-6.27L2.9 9.4l6.3-.9Z"/></svg> Sorotan</span><img src="assets/img/krti2026-stage.jpg" alt="Tim Bayucaraka ITS di panggung juara KRTI 2026" style="object-position:center 62%" /><figcaption><b>Juara Umum KRTI 2026</b><small>Bayucaraka ITS · Kontes Robot Terbang Indonesia</small></figcaption></figure>
-          <figure data-cat="ind" class="hl"><span class="hl-tag">Industri</span><img src="assets/img/magang-cnc-cabinet.jpg" alt="Panel listrik CNC dengan servo drive" /><figcaption><b>Panel listrik CNC &amp; servo drive</b><small>Magang PT Suryamasinka · wiring &amp; maintenance</small></figcaption></figure>
-          <figure data-cat="krti" class="hl"><span class="hl-tag">Prestasi</span><img src="assets/img/krti2025-award.jpg" alt="Juara 2 Technology Development KRTI 2025" style="object-position:center 30%" /><figcaption><b>Juara 2 Technology Development · KRTI 2025</b><small>Universitas Andalas, Padang</small></figcaption></figure>
           <figure data-cat="krti" class="wide"><img src="assets/img/krti2026-team.jpg" alt="Tim Bayucaraka KRTI 2026" loading="lazy" /><figcaption>Malam penganugerahan KRTI 2026</figcaption></figure>
           <figure data-cat="lab" class="wide"><img src="assets/img/fast-sorter.jpg" alt="FAST Flexible Auto Sorter" loading="lazy" /><figcaption>FAST — tempat sampah pemilah otomatis + dashboard</figcaption></figure>
           <figure data-cat="lab"><img src="assets/img/tim-dteo-presentasi.jpg" alt="Presentasi tim di DTEO ITS" loading="lazy" /><figcaption>Presentasi project tim · DTEO ITS</figcaption></figure>
+          <figure data-cat="krti"><img src="assets/img/krti2026-stage.jpg" alt="Panggung juara KRTI 2026" loading="lazy" /><figcaption>Juara Umum KRTI 2026</figcaption></figure>
+          <figure data-cat="ind"><img src="assets/img/magang-cnc-cabinet.jpg" alt="Panel listrik CNC" loading="lazy" /><figcaption>Panel listrik CNC &amp; servo drive</figcaption></figure>
+          <figure data-cat="krti"><img src="assets/img/krti2025-award.jpg" alt="Juara 2 TD KRTI 2025" loading="lazy" style="object-position:center 30%" /><figcaption>Juara 2 TD · KRTI 2025</figcaption></figure>
           <figure data-cat="lab"><img src="assets/img/cbl-dasar-otomasi.jpg" alt="Pengujian trainer CBL" loading="lazy" /><figcaption>Pengujian trainer CBL Dasar Otomasi Industri 2</figcaption></figure>
           <figure data-cat="lab" class="wide"><img src="assets/img/pjbl-sem2-modul.jpg" alt="Modul PjBL semester 2" loading="lazy" /><figcaption>Modul trainer PjBL semester 2</figcaption></figure>
           <figure data-cat="lab"><img src="assets/img/pjbl-sem2-tim.jpg" alt="Tim PjBL semester 2" loading="lazy" style="object-position:center 60%" /><figcaption>Tim PjBL semester 2</figcaption></figure>
