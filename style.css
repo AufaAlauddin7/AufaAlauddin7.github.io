@@ -567,3 +567,17 @@ img[src*="digital-twin-konveyor"]{object-fit:contain;background:#fff}
 .cs-gallery.n4 img{height:240px}
 @media (max-width:640px){.cs-gallery.n3,.cs-gallery.n4{grid-template-columns:1fr}.cs-gallery.n3 img:first-child{grid-row:auto;height:220px}.cs-gallery.n4 img{height:200px}}
 .cs-gallery.n3{grid-auto-rows:200px}.cs-gallery.n3 img{height:100%}@media (max-width:640px){.cs-gallery.n3{grid-auto-rows:180px}.cs-gallery.n3 img:first-child{height:100%}}
+
+/* ============ KARTU UNGGULAN: FOTO UTUH ============ */
+.featured .feat-media{display:flex;gap:12px;align-items:center;padding:16px;background:linear-gradient(135deg,var(--surface-2),color-mix(in srgb,var(--chip-bg) 60%,var(--surface-2)))}
+.featured .feat-media img{flex:var(--ar) 1 0;width:0;height:auto;min-height:0;aspect-ratio:var(--ar);object-fit:cover;border-radius:14px;box-shadow:0 10px 24px -14px rgba(10,19,36,.45)}
+.feat-body>p{display:none}
+.feat-cols .feat-intro p{color:var(--muted)}
+/* Foto melebar: tampil di atas, teks & spesifikasi di bawah */
+.featured.top{grid-template-columns:1fr}
+.featured.top .feat-media{padding:18px 18px 0;background:none}
+.featured.top .feat-body{padding:26px 40px 36px}
+.featured.top .feat-cols{display:grid;grid-template-columns:1fr 1.1fr;gap:32px;align-items:start}
+.featured.top .feat-cols .specs{margin-top:0}
+@media (max-width:960px){.featured.top .feat-cols{grid-template-columns:1fr;gap:12px}.featured.top .feat-body{padding:22px 24px 28px}}
+@media (max-width:640px){.featured .feat-media{flex-direction:column;padding:12px}.featured .feat-media img{width:100%;flex:none}.featured.top .feat-media{padding:12px 12px 0}}
